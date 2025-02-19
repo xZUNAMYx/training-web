@@ -4,8 +4,8 @@ import { inter } from "@/config/font";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Teslo | Shop",
-  description: "Web de Teslo Shop",
+  title: "Training Corp | Inicio",
+  description: "aacademia de inglés Training Corp",
 };
 
 export default function RootLayout({
