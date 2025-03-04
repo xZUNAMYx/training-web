@@ -34,16 +34,16 @@ export const TopMenu = () => {
             </div>
 
             <div className='hidden sm:block font-bold text-lg space-x-5'>
-                <Link href='/level/A1' className='text-2xl m-1 p-1 rounded-md transition-all hover:bg-gray-100'>
+                <Link href='/level/a1' className='text-2xl m-1 p-1 rounded-md transition-all hover:bg-gray-100'>
                     A1
                 </Link>
-                <Link href='/level/A2' className='text-2xl m-1 p-1 rounded-md transition-all hover:bg-gray-100'>
+                <Link href='/level/a2' className='text-2xl m-1 p-1 rounded-md transition-all hover:bg-gray-100'>
                     A2
                 </Link>
-                <Link href='/category/kid' className='text-2xl m-1 p-1 rounded-md transition-all hover:bg-gray-100'>
+                <Link href='/level/b1' className='text-2xl m-1 p-1 rounded-md transition-all hover:bg-gray-100'>
                     B1
                 </Link>
-                <Link href='/category/kid' className='text-2xl m-1 p-1 rounded-md transition-all hover:bg-gray-100'>
+                <Link href='/level/b2' className='text-2xl m-1 p-1 rounded-md transition-all hover:bg-gray-100'>
                     B2
                 </Link>
             </div>

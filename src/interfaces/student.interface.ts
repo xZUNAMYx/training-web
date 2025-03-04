@@ -5,7 +5,7 @@ export interface Student {
     images: string[];
     inStock: number;
     phone: number;
-    level: Level;
+    level: string;
     slug: string;
     tags: string[];
     name: string;
@@ -14,5 +14,5 @@ export interface Student {
 }
 
 export type Category = 'men'|'women'|'kid'|'unisex';
-export type Level = 'A1' | 'A2'|'B1'|'B2';
+export type Level = 'A1'|'A2'|'B1'|'B2';
 export type ValidTypes = 'shirts'|'pants'|'hoodies'|'hats';
