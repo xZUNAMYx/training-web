@@ -1,12 +1,32 @@
-import type { Metadata } from "next";
+'use client'
+
+import { Footer } from "@/components/ui/footer/Footer";
+import "./globals.css"
+
+// import type { Metadata } from "next";
 import { inter } from "@/config/font";
+import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 
-import "./globals.css";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-export const metadata: Metadata = {
-  title: "Training Corp | Inicio",
-  description: "aacademia de inglés Training Corp",
-};
+// export const metadata: Metadata = {
+//   title: "Training Corp | Inicio",
+//   description: "Academia de inglés Training Corp",
+// };
+
+const ProtectedLevelContent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { user } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!user) {
+      router.push("/auth/login");
+    }
+  }, [user, router])
+
+  return <>{children}</>;
+}
 
 export default function RootLayout({
   children,
@@ -14,14 +34,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={ inter.className}
-      >
+    <>
+      {/* <TopMenu /> */}
+      
+      <html lang="en">
+        <body className={inter.className}>
+          <AuthProvider>
+            <ProtectedLevelContent>
+              {children}
+            </ProtectedLevelContent>
+          </AuthProvider>
+        </body>
 
-        {children}
-        
-      </body>
-    </html>
+        <Footer />
+      </html>
+
+      
+    </>
+    
   );
 }

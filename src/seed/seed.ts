@@ -324,14 +324,6 @@ export const initialData: SeedData = {
                                 { title: "Formal vs Informal Greetings", url: "https://www.youtube.com/embed/iJaBa6Jqy8k?si=iKvgnQ3ZsbFKZSoy" },
                             ],
                         },
-                        {
-                            name: "Farewells", 
-                            description: "Introduce yourself and others", 
-                            vocabulary: ["Farewells"], 
-                            videos: [
-                                { title: "Formal vs Informal Greetings", url: "https://www.youtube.com/embed/iJaBa6Jqy8k?si=iKvgnQ3ZsbFKZSoy" },
-                            ],
-                        },
                     ],
                 },
                 {

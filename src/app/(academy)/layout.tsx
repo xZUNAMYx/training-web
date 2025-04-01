@@ -1,14 +1,14 @@
-import { Sidebar } from "@/components/ui/sidebar/Sidebar";
+// import { Sidebar } from "@/components/ui/sidebar/Sidebar";
 import { TopMenu } from "@/components/ui/top-menu/TopMenu";
 
-export default function ShopLayout({ children }: {
+export default function AcademyLayout({ children }: {
     children: React.ReactNode;
 }) {
     return (
-        <main className="min-h-screen">
+        <main className="">
             <TopMenu />
 
-            <Sidebar />
+            {/* <Sidebar /> */}
 
             <div className="px-0 sm:px-5">
                 { children }

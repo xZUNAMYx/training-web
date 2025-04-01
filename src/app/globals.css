@@ -8,44 +8,32 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */ 
+
 
 body {
   color: rgb(var(--foreground-rgb));
   font-size: 1.5rem;
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-start-rgb))
-      )
-      rgb(var(--background-end-rgb)) */
+  
 }
 
 h1 {
-  font-size: 2.75rem; /* 4xl */
+  font-size: 2.75rem; 
 }
 
 h2 {
-  font-size: 2.375rem; /* 3xl */
+  font-size: 2.375rem; 
 }
 
 h3 {
-  font-size: 2rem; /* 2xl */
+  font-size: 2rem; 
 }
 
 p {
-  font-size: 1.25rem; /* base */
+  font-size: 1.25rem; 
 }
 
 button {
-  font-size: 1.5rem; /* base */
+  font-size: 1.5rem; 
 }
 
 @keyframes fadeIn {

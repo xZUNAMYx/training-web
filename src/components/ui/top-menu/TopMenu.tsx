@@ -3,16 +3,16 @@
 import { titleFont } from '@/config/font'
 import Link from 'next/link'
 import React from 'react'
-import { IoSearchOutline } from 'react-icons/io5'
-import { useUIStore } from '../ui-store/ui-store'
 import Image from 'next/image';
+import { AuthStatus } from '@/components/auth/AuthStatus';
+import { useAuth } from '@/contexts/AuthContext';
 
 export const TopMenu = () => {
-    const openSideMenu = useUIStore(state => state.openSideMenu)
+    const {user, logout } = useAuth()
 
     return (
         // <nav className='flex px-5 justify-between items-center w-full'>
-        <nav className='flex flex-col md:flex-row justify-between items-center md:space-y-0 bg-primary text-white'>
+        <nav className='px-3 flex flex-col md:flex-row justify-between items-center md:space-y-0 bg-primary text-white relative'>
             <div className='flex flex-row items-center'>
                 <Link
                     href='/'
@@ -33,6 +33,7 @@ export const TopMenu = () => {
                 </Link>
             </div>
 
+        {user && (
             <div className='hidden sm:block font-bold text-lg space-x-5'>
                 <Link href='/level/a1' className='text-2xl m-1 p-1 rounded-md transition-all hover:bg-gray-100'>
                     A1
@@ -47,18 +48,10 @@ export const TopMenu = () => {
                     B2
                 </Link>
             </div>
+            )}
 
-            <div className='flex items-center font-bold text-2xl'>
-                <Link href='/search' className='mx-2'>
-                    <IoSearchOutline className='w-7 h-8' />
-                </Link>
-
-                <button 
-                    onClick={ openSideMenu }
-                    className='m-1 p-2 rounded-md transition-all hover:bg-primary-dark'
-                >
-                    Menú
-                </button>
+            <div className="flex items-center space-x-4 mb-2">
+                <AuthStatus />
             </div>
         </nav>
     )

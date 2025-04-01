@@ -1,5 +1,4 @@
-// import { StudentGrid } from "@/components/student/student-grid/StudentGrid";
-// import { Title } from "@/components/ui/title/Title";
+
 import { Button } from "@/components/ui/button/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card/card";
 import { initialData } from "@/seed/seed";
@@ -16,10 +15,11 @@ export default function AcademyPage() {
         students={ students }
       /> */}
 
-<div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-6 text-center">English Course Levels</h1>
+<div className="container mx-auto px-1 py-1">
+      <h1 className="text-3xl font-bold mb-6 text-center items-center justify-center">English Course Levelsss</h1>
+      <div className="flex flex-col items-center">
       {Object.entries(levels).map(([levelId, level]) => (
-        <div key={levelId} className="mb-8">
+        <div key={levelId} className="mb-8 w-full max-w-4xl text-center">
           <h2 className="text-3xl font-bold mb-4 text-center">{level.name.toUpperCase()}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
             {level.units.map((unit) => (
@@ -50,6 +50,7 @@ export default function AcademyPage() {
           </div>
         </div>
       ))}
+      </div>
     </div>
     </>
   );
